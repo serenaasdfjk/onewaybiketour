@@ -9,9 +9,9 @@ One Way Bike Tours is a Next.js frontend for exploring curated one-way and round
 - Static tour catalogue in `lib/tours.ts`
 - Shared UI in `components/`
 - Pages in `app/`: home, tours, tour details, onboarding, login, and register
-- No backend or API routes are present in the supplied project
+- Supabase authentication with cookie-based sessions and a protected account page
 
-The login and register screens are currently presentation-only forms. They do not create accounts or authenticate users because the supplied project contains no backend contract, persistence layer, or authentication provider.
+Login and registration use Supabase Auth. See [AUTH-SETUP.md](AUTH-SETUP.md) for dashboard configuration and testing. Tour and booking data remain demo data.
 
 ## Run locally
 
@@ -31,4 +31,4 @@ npm run build
 
 ## Adding a backend later
 
-Keep the tour catalogue contract aligned with `lib/tours.ts`. The first backend integration should define explicit endpoints for authentication and tour data, then replace the presentation-only form handlers and static tour imports with typed API clients. Until that contract exists, the static data is the intentional source of truth for the demo application.
+Keep the tour catalogue contract aligned with `lib/tours.ts`. A future booking backend must validate users, availability and prices on the server and protect private records with database access policies. Authentication alone does not turn the current demo bookings into persistent reservations.
