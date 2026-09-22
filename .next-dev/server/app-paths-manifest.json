@@ -1,9 +1,6 @@
 {
-  "/register/page": "app/register/page.js",
-  "/account/page": "app/account/page.js",
-  "/login/page": "app/login/page.js",
-  "/api/auth/login/route": "app/api/auth/login/route.js",
   "/tours/[id]/page": "app/tours/[id]/page.js",
-  "/api/auth/register/route": "app/api/auth/register/route.js",
-  "/tours/page": "app/tours/page.js"
+  "/tours/page": "app/tours/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
 }
